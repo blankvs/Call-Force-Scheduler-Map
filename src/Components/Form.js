@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState, Component } from 'react'
 import '../css/Form.css'
 
 
-export const Form = ({ show, close }) => {
+export const Form = ({ show, close, events, addEvent }) => {
+
+    console.log(events)
+
     return (
         <div className="modal-wrapper"
             style={{
@@ -16,12 +19,12 @@ export const Form = ({ show, close }) => {
             </div>
             <div className="modal-content">
                 <div className="modal-body">
-                    <select className="filter-column-selector" >
-                        <option className="doctor-option">DOCTOR</option>
-                        <option className="assistant-option">ASSISTANT</option>
-                        <option className="hygienist-option">HYGIENIST</option>
+                    <select key={events.column} className="filter-column-selector" >
+                        <option value="column-one" className="doctor-option">DOCTOR</option>
+                        <option value="column-two" className="assistant-option">ASSISTANT</option>
+                        <option value="column-three" className="hygienist-option">HYGIENIST</option>
                     </select>
-                    <select className="select-start-time" >
+                    <select key={events.startTime} className="select-start-time">
                         <option>9AM</option>
                         <option>10AM</option>
                         <option>11AM</option>
@@ -32,7 +35,7 @@ export const Form = ({ show, close }) => {
                         <option>4PM</option>
                         <option>5PM</option>
                     </select>
-                    <select className="select-end-time" placeholder="HI">
+                    <select key={events.endTime} className="select-end-time">
                         <option>9AM</option>
                         <option>10AM</option>
                         <option>11AM</option>
@@ -45,7 +48,7 @@ export const Form = ({ show, close }) => {
                     </select>
                 </div>
                 <div className="modal-footer">
-                    <button onClick={close} className="btn-cancel">SAVE</button>
+                    <button onClick={close} onChange={addEvent} className="btn-cancel" >SAVE</button> 
                 </div>
             </div>
         </div>

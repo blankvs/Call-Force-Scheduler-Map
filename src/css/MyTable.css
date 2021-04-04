@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-top: -300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th, td {
+    padding: 10px;
+    width: 200px;
+}
+
+.column-doctor-1 {
+    color: #F1534E;
+}
+
+.column-hygienist-2 {
+    color: #F1534E;
+}
+
+.column-assistant-3 {
+    color: #F1534E;
+}
+
+
+/* .1-hour-event::after {
+    content: 'Available';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 163px;
+    height: 120px;
+    background-color: blue;
+}
+   
+.2-hour-event::after {
+    content: 'Available';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 163px;
+    height: 240px;
+    background-color: blue;
+}
+  
+.3-hour-event::after {
+    content: 'Available';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 163px;
+    height: 380px;
+    background-color: blue;
+} */
